@@ -4,15 +4,16 @@ tags:
   - nav
 navtitle: À Propos
 section: à propos
-date: 2017-01-01
+date: 2019-04-04
 permalink: /about/index.html
 ---
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Tirez parti des cadres agiles pour fournir un résumé robuste des aperçus de haut niveau. Les approches itératives de la stratégie d'entreprise favorisent la réflexion collaborative pour faire avancer la proposition de valeur globale. Développez de manière organique la vision globale des innovations de rupture via la diversité et l'autonomisation des lieux de travail.
 
 ## Nos services
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Amenez à la table des stratégies de survie gagnant-gagnant pour assurer une domination proactive. En fin de compte, une nouvelle norme ayant évolué depuis la génération X est de se diriger vers une solution de cloud simplifiée. Le contenu généré par l'utilisateur en temps réel aura plusieurs points de contact pour la délocalisation. Développez de manière organique la vision globale des innovations de rupture via la diversité et l'autonomisation des lieux de travail.
+
 
 ### Une pensée bleu ciel 
 
