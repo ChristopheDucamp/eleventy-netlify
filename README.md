@@ -1,33 +1,33 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bbf28a84-4bdb-407b-a2fa-32628d27fa3d/deploy-status)](https://app.netlify.com/sites/eleventy-netlify-boilerplate/deploys)
+[![Statut Netlify](https://api.netlify.com/api/v1/badges/bbf28a84-4bdb-407b-a2fa-32628d27fa3d/deploy-status)](https://app.netlify.com/sites/eleventy-netlify-boilerplate/deploys)
 
 # Eleventy Netlify Boilerplate
 
-## What is it?
+## Qu'est-ce que c'est ?
 
-A simple template for building a fast, static website using the [Eleventy](https://www.11ty.io/) static site generator, with [Netlify CMS](https://www.netlifycms.org/) baked-in, ready to deploy to [Netlify](https://www.netlify.com) in a couple of clicks.
+Un modèle simple pour créer un site web rapide et statique à l'aide du générateur de site statique [Eleventy](https://www.11ty.io/), avec [Netlify CMS](https://www.netlifycms.org/) intégré, prêt à être déployé en quelques clics sur [Netlify](https://www.netlify.com).
 
-Use it as a starter for your own projects or as an easy way to get started building websites with Eleventy.
+Utilisez-le comme un démarrage pour vos propres projets ou comme un moyen rapide pour commencer à construire des sites web avec Eleventy.
 
-Based on the [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog) repo (see there for additional info on Eleventy usage).
+Basé sur le repo du [Blog de Base Eleventy](https://github.com/11ty/eleventy-base-blog) (voir là l'info supplémentaire sur l'usage d'Eleventy).
 
-🔥 **This project is featured on Netlify's official [template showcase](https://templates.netlify.com/template/eleventy-netlify-boilerplate/)** 🔥
+🔥 **Ce projet est mis en avant sur la [vitrine de modèles](https://templates.netlify.com/template/eleventy-netlify-boilerplate/) de Netlify** 🔥
 
-## [Demo Site](https://eleventy-netlify-boilerplate.netlify.com//)
+## [Site de démo](https://eleventy-netlify-boilerplate.netlify.com//)
 
-## Features
+## Fonctionnalités
 
-* Sample pages and blog with tag support
-* Netlify CMS with editor previews (thanks [@biilmann](https://github.com/biilmann)!)
-* CSS 2kb minified, inlined for fastest page render
-* Pre-builds and minifies your HTML
-* Responsive CSS Grid layout, with fallbacks (see [Browser Support](#browser-support))
-* Uses Markdown files for content
-* Uses Liquid and/or Nunjucks templates for layout
+* Pages échantillons et blog avec support du tag
+* Netlify CMS avec prévisualisation dans l'éditeur (merci  [@biilmann](https://github.com/biilmann)!)
+* CSS 2kb minifiée, dans la ligne pour une restitution de page plus rapide
+* Pre-builds et minimise votre HTML
+* layout responsive CSS Grid, avec fallbacks (voir [Suppor Navigateur](#browser-support))
+* Utilise les fichiers Markdown files pour le contenu
+* Utilise les modèles Liquid et/ou Nunjucks pour le layout
 * 100% Javascript framework free
 * Optional pipeline for minified inline JS
 * Continuous Deployment workflow via Netlify
 
-## Want to try it out now?
+## Vous voulez l'essayer dès maintenant ?
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
 
@@ -41,7 +41,7 @@ and everything needed for running the CMS:
 * Manage content with Netlify CMS
 * Process form data with Netlify Forms
 
-### Setup authentication
+### Authentification d'Installation
 
 After deploying this project, Netlify Identity will add you as a CMS user and
 will email you an invite. It is not necessary to accept this invite if you wish
@@ -68,16 +68,16 @@ see a text link to "Generate access token in GitHub".
 
 If you need any help with setting up Netlify CMS, you can reach out to the Netlify team in the [Netlify CMS Gitter](https://gitter.im/netlify/netlifycms).
 
-## Local development
+## Développement Local
 
-### 1. Clone this repository:
+### 1. Clonez ce repository :
 
 ```
 git clone https://github.com/danurbanowicz/eleventy-netlify-boilerplate.git my-blog-name
 ```
 
 
-### 2. Navigate to the directory
+### 2. Naviguez vers le répertoire 
 
 ```
 cd my-blog-name
@@ -85,17 +85,17 @@ cd my-blog-name
 
 Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
 
-### 3. Install dependencies
+### 3. Installez les dépendances
 
 ```
 npm install
 ```
 
-### 4. Edit _data/metadata.json
+### 4. Editez _data/metadata.json
 
 This file contains your site title and author details.
 
-### 5. Run Eleventy (builds the site)
+### 5. Lancez Eleventy (construit le site)
 
 ```
 npx eleventy

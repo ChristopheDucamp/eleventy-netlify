@@ -6,5 +6,9 @@
 	<string>0</string>
 	<key>CreationDate</key>
 	<date>2019-03-09T11:27:37Z</date>
+	<key>Embedded Photos</key>
+	<array>
+		<string>NBImages/Gibert-J</string>
+	</array>
 </dict>
 </plist>

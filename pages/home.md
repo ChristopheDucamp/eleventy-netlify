@@ -7,9 +7,9 @@ navtitle: Home
 tags:
   - nav
 ---
-# Welcome
+# Bienvenue
 
-This is a template for building a simple blog website with the [Eleventy static site generator](https://www.11ty.io), with deployment to [Netlify](https://www.netlify.com).
+Ceci est un modèle pour construire un blog simple avec le [générateur de site statique Eleventy](https://www.11ty.io), avec un déploiement vers [Netlify](https://www.netlify.com).
 
 Includes [Netlify CMS](https://www.netlifycms.org) for WYSIWYG content editing, and [Netlify Forms](https://www.netlify.com/docs/form-handling) for processing your site's form data.
 

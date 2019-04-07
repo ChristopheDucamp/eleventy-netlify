@@ -8,8 +8,5 @@ section: contact
 date: 2018-01-01
 permalink: /contact/index.html
 ---
-The contact form on this page uses
-[Netlify Forms](https://www.netlify.com/docs/form-handling/) to process
-submissions, and saves them in your Netlify account where you can optionally
-set up notifications. Each submission is passed through a spam filter and if
-flagged, will display a CAPTCHA challenge to the user.
+Le formulaire de contact sur cette page utilise 
+[Netlify Forms](https://www.netlify.com/docs/form-handling/) pour traiter les demandes, et les sauvegarde dans votre compte Netlify où vous pouvez facultativement régler les notifications. Chaque demande passe à travers un filtre de spam et si elle est repérée, affichera un défi CAPTCHA à l’utilisateur.
