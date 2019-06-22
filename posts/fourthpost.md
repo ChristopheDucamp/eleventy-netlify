@@ -1,6 +1,6 @@
 ---
 title: Afficher les commentaires de troll en Comic Sans
-date: 2019-03-07T00:00:00.000Z
+date: 2019-06-07T23:00:00.000Z
 summary: >-
   Zach est le créateur d'Elevante (le générateur qui motorise ce blog) et a
   participé avec joie au dernier indiewebcamp. Fan de générateur de sites
