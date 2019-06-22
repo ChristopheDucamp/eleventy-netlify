@@ -1,14 +1,14 @@
 ---
-title: 'Likes du 22 juin '
+title: 'En vrac: quelques likes d''hjertnes.blog'
 date: 2019-06-21T23:00:00.000Z
-summary: 'Infobésité '
+summary: 'Quelques lectures en ligne pour commencer l''été. '
 tags:
   - post
-  - design
+  - likes
 ---
 # [Likes](https://hjertnes.blog/2019/06/22/likes)
 
-## June 22, 2019
+## 22 juin 2019
 
   * [Inside Neil Gaiman’s Rural Writing Retreat](https://variety.com/2019/tv/features/neil-gaiman-american-gods-good-omens-writers-office-interview-1203238915/)
   * [It’s Okay to Feel Ambivalent About Your Children](https://www.wsj.com/articles/its-okay-to-feel-ambivalent-about-your-children-11561109407)
