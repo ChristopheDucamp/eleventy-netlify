@@ -17,15 +17,15 @@ Basé sur le repo du [Blog de Base Eleventy](https://github.com/11ty/eleventy-ba
 ## Fonctionnalités
 
 * Pages échantillons et blog avec support du tag
-* Netlify CMS avec prévisualisation dans l'éditeur (merci  [@biilmann](https://github.com/biilmann)!)
+* Netlify CMS avec prévisualisation dans l'éditeur (merci [@biilmann](https://github.com/biilmann)!)
 * CSS 2kb minifiée, dans la ligne pour une restitution de page plus rapide
 * Pre-builds et minimise votre HTML
-* layout responsive CSS Grid, avec fallbacks (voir [Suppor Navigateur](#browser-support))
+* layout responsive CSS Grid, avec fallbacks (voir [Support Navigateur](#browser-support))
 * Utilise les fichiers Markdown files pour le contenu
 * Utilise les modèles Liquid et/ou Nunjucks pour le layout
 * 100% Javascript framework free
-* Optional pipeline for minified inline JS
-* Continuous Deployment workflow via Netlify
+* Pipeline facultatif pour JS inline minifié
+* Workflow de déploiement continu avec Netlify
 
 ## Vous voulez l'essayer dès maintenant ?
 
@@ -82,7 +82,7 @@ npm install
 
 ### 4. Editez _data/metadata.json
 
-This file contains your site title and author details.
+Ce fichier contient le titre de votre site et les détails de l'auteur.
 
 ### 5. Lancez Eleventy (construit le site)
 
