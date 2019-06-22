@@ -1,12 +1,9 @@
 ---
 title: Construire mon blog à partir de zéro en utilisant Eleventy
 date: 2019-06-22T17:00:00.000Z
-summary: 
-
-
+summary: Traduction en cours d'un tutoriel de prise en mains d'Eleventy à partir de zéro (sans passer par le déploiement automatique Netlify)
 tags:
   - post
-  - indieweb
   - eleventy
 ---
 
@@ -16,47 +13,48 @@ Eleventy est un générateur de site statique adapté aux débutants qui s'exéc
 
 ## Project Highlights [#](https://www.filamentgroup.com/lab/build-a-blog/#project-highlights)
 
-Before we dive in, let me tell you a little bit about Eleventy’s project goals.
 
-Eleventy is flexible. It wants to work with your project’s directory structure.
+Avant de plonger, laissez-moi vous parler un peu des objectifs du projet Eleventy.
 
-Eleventy is fast. Eleventy includes a [benchmark with 10,000 templates](https://github.com/11ty/eleventy-benchmark) (12KB each, 120MB total) that runs in about 17 seconds. That’s 1.7ms per template.
+Eleventy est flexible. Il veut travailler avec la structure de répertoires de votre projet.
 
-Eleventy doesn’t lock you into one specific template language. Out of the box, Eleventy works with HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, HAML, and JavaScript files. You can use one or more of these. You can mix them together.
+Eleventy est rapide. Eleventy inclut un [benchmark avec 10 000 modèles](https://github.com/11ty/eleventy-benchmark) (12 Ko chacun, 120 Mo au total) qui s'exécute en 17 secondes environ. Cela fait 1,7 ms par modèle.
 
-Eleventy is gently iterative. You can migrate your existing content slowly over to use Eleventy. You can use Eleventy to migrate your content to a new template language, one template at a time.
+Eleventy ne vous verrouille pas dans un langage spécifique de modèle. Eleventy fonctionne avec les fichiers HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, HAML et JavaScript. Vous pouvez utiliser un ou plusieurs d'entre eux. Vous pouvez les mélanger ensemble.
 
-It’s being used by [lots of cool sites](https://www.11ty.io/docs/sites/), including the very site you’re reading right now ([filamentgroup.com](https://www.filamentgroup.com/)) and the site for [Google’s V8 project](https://v8.dev/).
+Eleventy est doucement itératif. Vous pouvez migrer votre contenu existant lentement pour utiliser Eleventy. Eleventy vous permet de migrer votre contenu vers un nouveau langage de modèle, un modèle à la fois.
+
+Il est utilisé actuellement par [beaucoup de sites cools](https://www.11ty.io/docs/sites/), y compris le site sur lequel vous me lisez en ce moment (NDT [filamentgroup.com](https://www.filamentgroup.com/)) et le site pour le [projet V8 de Google](https://v8.dev/).
 
 ## Installation [#](https://www.filamentgroup.com/lab/build-a-blog/#installation)
 
-But before we get too far along we need to have Node installed. Node comes as an installable program you can [download from the web](https://nodejs.org/en/). Bask in the safety of this GUI installer and comfortably click through each wizard step with confidence.
+Mais avant d'aller plus loin, nous devons installer Node. Node est livré sous forme d'un programme installable que vous pouvez   [télécharger sur le web](https://nodejs.org/en/). Profitez de la sécurité de cet installateur graphique et cliquez confortablement sur chaque étape de l'assistant en toute confiance.
 
-Before we lull ourselves into a false sense of security, let’s hop on this bull and ride. We need to open our terminal, command line, or command prompt window. On a Mac this means finding the `Terminal.app` (usually in `/Applications/Utilities/Terminal.app`) and opening it. On Windows this is called `cmd.exe` (found in the Start Menu under `Start > Program Files > Accessories > Command Prompt`).
+Avant de nous endormir dans un faux sentiment de sécurité, enfourchons ce taureau et partons. Nous devons ouvrir notre terminal, notre ligne de commande ou notre fenêtre d'invite de commande. Sur un Mac, cela signifie trouver le fichier `Terminal.app` (généralement dans `/Applications/Utilitaires/Terminal.app`) et l'ouvrir. Sous Windows, cela s'appelle `cmd.exe` (ça se trouve dans le menu Démarrer sous `Démarrer > Programmes > Accessoires> Invite de commandes`).
 
-Make sure Node is installed correctly by running `node --version`. Eleventy requires Node 8. You’ll know if you have Node 8 or higher if the first number after the `v` is greater than or equal to 8. For example, if `node --version` returns `v8.11.3`, you have Node 8.
+Assurez-vous que Node soit correctement installé en lançant `node --version`. Eleventy requiert Node 8. Vous saurez si vous avez Node 8 ou supérieur si le premier chiffre après le `v` est supérieur ou égal à 8. Par exemple, si `node --version` renvoie `v8.11.3`, vous avez Node 8.
 
-To install Eleventy, you’ll need to enter the following command in your command prompt and press enter to execute it:
+Pour installer Eleventy, vous devrez entrer la commande suivante dans votre invite de commande et pressez sur la touche retour pour l'exécuter : 
     
     npm install -g @11ty/eleventy
 
-_Read more about [installing locally in a project instead of globally](https://www.11ty.io/docs/local-installation/)_
+_Pour en savoir plus sur l'[installation locale dans un projet au lieu de globalement](https://www.11ty.io/docs/local-installation/)_
 
-## Running Eleventy for the First Time [#](https://www.filamentgroup.com/lab/build-a-blog/#running-eleventy-for-the-first-time)
+## Faire tourner Eleventy pour la Première Fois [#](https://www.filamentgroup.com/lab/build-a-blog/#running-eleventy-for-the-first-time)
 
-The simplest thing that Eleventy can help you do is transform a markdown file into HTML. Make a new directory for our project called `eleventy-intro`…
+La chose la plus simple sur laquelle Eleventy peut vous aider, c'est de transformer un fichier markdown en HTML. Faites un nouveau répertoire pour notre projet appelé `eleventy-intro`…
     
     mkdir eleventy-intro
     cd eleventy-intro
     
 
-…and create a new file called `blog-post.md`. Save the following contents in `blog-post.md`:
+…et créez un nouveau fichier appelé `blog-post.md`. Sauvegardez les contenus suivants dans `blog-post.md`:
     
-    # This is my Title  
+    # Ceci est mon Titre
       
-    This is a paragraph of text.
+    Voici un paragraphe de texte.
 
-Now you can run Eleventy:
+Maintenant vous pouvez lancer Eleventy :
     
     eleventy
     
@@ -64,22 +62,22 @@ Now you can run Eleventy:
     Processed 1 file in 0.13 seconds
     
 
-## Make it Valid HTML [#](https://www.filamentgroup.com/lab/build-a-blog/#make-it-valid-html)
+## Transformez-le en HTML Valide [#](https://www.filamentgroup.com/lab/build-a-blog/#make-it-valid-html)
 
-We’ve successfully transformed a markdown file into HTML. Congratulations! But if we open that file `_site/blog-post/index.html`to see our HTML output—it’s not valid HTML.
+Nous avons transformé avec succès un fichier markdown en HTML. Bravo ! Mais si nous ouvrons ce fichier `_site/blog-post/index.html` pour voir notre output HTML, ce n'est pas du HTML valide.
     
-    <h1>This is my Title</h1>  
-    <p>This is a paragraph of text.</p>
+    <h1>Ceci est mon Titre</h1>  
+    <p>Voici un paragraphe de texte.</p>
 
-To make it valid without adding a bunch of junk inside of our markdown file, let’s add an [Eleventy layout](https://www.11ty.io/docs/layouts/). This will wrap a template with other stuff.
+Pour qu'il soit valide sans ajouter un paquet de merde dans notre fichier markdwon, ajoutons un [layout Eleventy](https://www.11ty.io/docs/layouts/). Ceci emballabera un gabarit avec d'autres trucs.
 
-Save these contents into `_includes/layout.liquid`:
+Sauvegardons ces contenus à l'intérieur d'un fichier `_includes/layout.liquid`:
     
     <!doctype html>  
-    <html lang="en">  
+    <html lang="fr">  
         <head>  
             <meta charset="utf-8">  
-            <title>My Blog</title>  
+            <title>Mon Blog</title>  
         </head>  
         <body>  
             <h1>{{ pageTitle }}</h1>  
@@ -88,50 +86,50 @@ Save these contents into `_includes/layout.liquid`:
         </body>  
     </html>
 
-If this is the first time you’ve seen a `liquid` template and are not familiar with the syntax, you may want to take a second and head over to the [Shopify Liquid documentation](https://shopify.github.io/liquid/) to learn more. There is one main idea on display here: Double curly braces are used to output a variable (e.g. `{{ pageTitle }}`).
+Si c'est la première fois que vous voyez un template `liquid` et que vous n'êtes pas à l'aise avec la syntaxe, vous pourrez jeter un oeil sur la [documentation Shopify Liquid](https://shopify.github.io/liquid/) afin d'en savoir plus. Ceci est une idée principale ici : les doubles accolades sont utilisés pour générer une variable (par ex. `{{ pageTitle }}`).
 
-In our layout example we use `{{ content }}` to denote where our markdown template content will go.
+Dans notre exemple de layout nous utilisons `{{ content }}` pour indiquer où ira notre contenu dans le template markdown.
 
-Now we need to tell our `blog-post.md` file to use the layout. Let’s add something to the top of our file to do just that:
+Maintnenat nous devons dire à notre fichier `blog-post.md` d'utiliser le layout. Ajoutons quelque chose en haut de notre fichier pour faire simplement ça : 
     
     ---  
     layout: layout.liquid  
     ---  
-    # This is my Title  
+    # Ceci est un mon Titre
       
-    This is a paragraph of text.
+    Voici un paragraphe de texte.
 
-This section between (and including) the two `---` marks is called [YAML Front Matter](https://www.11ty.io/docs/data-frontmatter/). It’s a way to write data into our template file that can be used by Liquid templates. If you’ve used Jekyll this may look familiar.
+Cette section entre (et incluant) les deux marques `---` est appelée le [Front Matter YAML](https://www.11ty.io/docs/data-frontmatter/). C'est un moyen d'écrire des données dans notre fichier de modèle que les modèles de Liquid peuvent utiliser. Si vous avez utilisé Jekyll, cela peut vous paraître familier.
 
-The `layout` key tells Eleventy to look for files inside of the `_includes`folder to wrap around the content of the template. Specifically, we want our blog post to use the `_includes/layout.liquid` file as a wrapper layout.
+La clé `layout` indique à Eleventy de rechercher des fichiers dans le dossier `_includes` pour envelopper le contenu du modèle. Plus précisément, nous souhaitons que notre article de blog utilise le fichier `_includes/layout.liquid` comme enveloppe de layout.
 
-Now, let’s move our title text into our `pageTitle` front matter so that it can be used in our layout file. Now our `blog-post.md` looks like this:
+Maintenant, déplaçons notre titre dans notre texte `pageTitle` afin qu’il puisse être utilisé dans notre fichier de présentation. Maintenant notre `blog-post.md` ressemble à ceci :
     
     ---  
     layout: layout.liquid  
-    pageTitle: This is my Title  
+    pageTitle: Ceci est mon Titre
     ---  
-    This is a paragraph of text.
+    Voici un paragraphe de texte.
 
-Let’s run Eleventy again to generate our output:
+Lançons de nouveau Eleventy pour génrer notre output :
     
     eleventy
 
-Open the output file at `_site/blog-post/index.html` to see what happened:
+Ouvrez le fichier output `_site/blog-post/index.html` pour voir ce qui s'est passé : 
     
     <!doctype html>  
-    <html lang="en">  
+    <html lang="fr">  
         <head>  
             <meta charset="utf-8">  
-            <title>My Blog</title>  
+            <title>Mon Blog</title>  
         </head>  
         <body>  
-            <h1>This is my Title</h1>  
-            <p>This is a paragraph of text.</p>  
+            <h1>Ceci est mon Titre</h1>  
+            <p>Voici un paragraphe de texte.</p>  
         </body>  
     </html>
 
-## Apply Changes Automatically [#](https://www.filamentgroup.com/lab/build-a-blog/#apply-changes-automatically)
+## Appliquer Automatiquement les Changements [#](https://www.filamentgroup.com/lab/build-a-blog/#apply-changes-automatically)
 
 It will be tiring to re-run Eleventy every time we make a change. Let’s use `--serve` to run a hot-reloading local web server that will apply our changes automatically when you save.
     
@@ -141,7 +139,7 @@ Your command prompt will tell you what URL to navigate to but the default is: [
 
 Try editing our `blog-post.md` file and saving it. Eleventy will run automatically _and_ the browser window will refresh automatically when it’s done.
 
-## Let’s make a Blog! [#](https://www.filamentgroup.com/lab/build-a-blog/#let%E2%80%99s-make-a-blog!)
+## Produisons un Blog! [#](https://www.filamentgroup.com/lab/build-a-blog/#let%E2%80%99s-make-a-blog!)
 
 Why not? We’re actually pretty close to making a simple blog! Let’s take it a little further, shall we? Let’s make a `posts` folder for our blog posts and move our `blog-post.md` file in there. Then add a `posts/posts.json` file with the following content:
     
@@ -162,7 +160,7 @@ Our `layout` is being applied from `posts/posts.json` so we don’t need tha
 
 Is our server still applying changes automatically? If so, check out our new blog post at [`http://localhost:8080/posts/blog-post-2/`](http://localhost:8080/posts/blog-post-2/). Our old post should now live at [`http://localhost:8080/posts/blog-post/`](http://localhost:8080/posts/blog-post/).
 
-### Finish with a Home Page [#](https://www.filamentgroup.com/lab/build-a-blog/#finish-with-a-home-page)
+### Finisson par une Page d'Accueil [#](https://www.filamentgroup.com/lab/build-a-blog/#finish-with-a-home-page)
 
 Doing great so far. We have two blog posts. But if we go to the root of our site (`http://localhost:8080/`) there’s nothing there! Let’s add a home page that lists all of our lovely blog posts.
 
@@ -195,7 +193,7 @@ Let’s make an `index.html` to show you what I mean:
 This outputs the following:
     
     <!doctype html>  
-    <html lang="en">  
+    <html lang="fr">  
         <head>  
             <meta charset="utf-8">  
             <title>My Blog</title>  
@@ -215,7 +213,7 @@ You did it! It’s a blog!
 
 To take this a bit further, check out the [`eleventy-base-blog` project](https://github.com/11ty/eleventy-base-blog), which is a full starter project for a blog site including RSS feeds, tag pages, syntax highlighting, custom markdown plugins, and more!
 
-## Put it on the web! [#](https://www.filamentgroup.com/lab/build-a-blog/#put-it-on-the-web!)
+## Posons-le sur le web ! [#](https://www.filamentgroup.com/lab/build-a-blog/#put-it-on-the-web!)
 
 You can use Netlify to very quickly put this on the web. Register and/or Log in to [`app.netlify.com`](https://app.netlify.com/) and drag and drop our `_site` folder onto the web browser window to upload the contents live to the web!
 
