@@ -1,12 +1,13 @@
 ---
-title: les commentaires de troll en comics sans ?
+title: Afficher les commentaires de troll en Comic Sans
 date: 2019-03-07T00:00:00.000Z
 summary: >-
-  Zach a participé avec joie au dernier indiewebcamp. Fan de générateur de sites
-  statiques et de polices de caractères, j'envisage d'étudier et traduire son
-  post du 7 juin "Fender Snarky Comments in ComicSans". Son site personnel
-  motorisé par Eleventy est en outre un modèle d'implémentation du système de
-  webmentions.
+  Zach est le créateur d'Elevante (le générateur qui motorise ce blog) et a
+  participé avec joie au dernier indiewebcamp. Fan de générateur de sites
+  statiques comme de polices de caractères, j'envisage d'étudier et traduire son
+  post du 7 juin "Fender Snarky Comments in ComicSans" plus qu'inspirant pour
+  designer les webmentions.  Son site personnel motorisé par Eleventy est en
+  outre un modèle d'implémentation du système de webmentions.
 tags:
   - post
   - commentaires
@@ -32,7 +33,7 @@ Vous pouvez voir un exemple du fonctionnement des webmentions sur mon site dans 
 
 ## ANALYSE DE SENTIMENT
 
-Hosting my own content and comments allows me to be a bit more creative with it. So I decided to take this a step further and have [a little fun](https://twitter.com/zachleat/status/1132727088031653891) with negative comments.
+L'hébergement de mon propre contenu et de mes commentaires me permet d'être un peu plus créatif avec ce contenu. J'ai donc décidé d'aller un peu plus loin et de [m'amuser un peu](https://twitter.com/zachleat/status/1132727088031653891).
 
 First, how do we find out if a comment is negative? Let’s try to use [Natural, a plugin on npm](https://www.npmjs.com/package/natural). I added a Liquid filter to my [Eleventy configuration file](https://www.11ty.io/docs/config/) to analyze text and spit out a sentiment value. `0` is neutral, `< 0` is negative, and `> 0` is positive. Note that this natural language processing isn’t 100% (sometimes I’ll get a false positive) but this is just a fun demo on my site.
     
