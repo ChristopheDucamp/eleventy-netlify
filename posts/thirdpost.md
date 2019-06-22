@@ -1,7 +1,7 @@
 ---
-title: This is my third post which has a rather long title
-summary: Why contemplating our mortality can be a powerful catalyst for change
-date: 2017-01-01
+title: Voici mon troisième article qui un titre plutôt longuet
+summary: Pourquoi contempler notre mortalité peut être un puissant catalyseur de changement
+date: 2019-06-21
 tags:
   - post
   - tech
@@ -18,6 +18,6 @@ code {
 
 Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
 
-## Section Header
+## Titre de Section 
 
 Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.

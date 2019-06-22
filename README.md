@@ -29,34 +29,27 @@ Basé sur le repo du [Blog de Base Eleventy](https://github.com/11ty/eleventy-ba
 
 ## Vous voulez l'essayer dès maintenant ?
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+[![Déployer vers Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
 
-Clicking the button above will deploy a copy of the demo website to your Netlify
-account (you can create an account during this process if you don't have one)
-and everything needed for running the CMS:
+Cliquer sur le bouton au-dessous déploiera une copie du site web de démo sur votre compte Netlify (vous pouvez créer un compte durant ce processus si vous n'en avez pas déjà un) et tout ce qui est exigé pour faire fonctionner le CMS : 
 
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Netlify CMS
-* Process form data with Netlify Forms
+* Un nouveau dépôt dans votre compte GitHub avec le code 
+* Un Déploiement Complet Continu sur le réseau global CDN de Netlify
+* Le contrôle des utilisateurs et l'accès à l'Identité Netlify
+* La gestion de contenu avec le CMS Netlify
+* Les formulaires de traitement de données avec Netlify Forms
 
 ### Authentification d'Installation
 
-After deploying this project, Netlify Identity will add you as a CMS user and
-will email you an invite. It is not necessary to accept this invite if you wish
-to use an
-[OAuth provider](https://www.netlify.com/docs/identity/#external-provider-login)
-(e.g. Github) to manage authentication for your CMS.
-It is recommended to use this method of authentication as it removes the need
-for an email & password to log in to the CMS and is generally more secure. You
-will need to add an OAuth provider in your Netlify app settings under
+Après avoir déployé ce projet, Netlify Identity vous ajoutera comme un utilisateur du CMS et vous enverra une invitation.
+Il n'est pas nécessaire d'accepter cette inviation si vous souhaitez utiliser un [fournisseur OAuth](https://www.netlify.com/docs/identity/#external-provider-login)
+(par ex. Github) pour gérer l'authentification à votre CMS.
+Il est recommandé d'utiliser cette méthode d'authentification car elle retire le besoin d'avoir un e-mail et un mot de passe pour se connecter au CMS et elle est plus sécurisée. Vous devrez ajouter un fournisseur OAuth dans vos réglages de l'app Netlify sous 
 "Settings" > "Identity" > "External providers".
 
-Once you've added an OAuth provider, navigate to `/admin` on your site, select your provider from the
-list, and you should then be logged into your CMS. Cool huh?
+Une fois votre fournisseur OAuth ajouté, naviguer vers `/admin` sur votre site, sélectionnez votre fournisseur à partir de la liste, et vous devriez être ensuite connecté à votre CSM. Cool non ?
 
-Now you're all set, and you can start editing content!
+Maintenant que tout est paramétré, vous pouvez commencer à modifier le contenu ! 
 
 ## Gotchas
 
