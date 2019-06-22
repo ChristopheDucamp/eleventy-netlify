@@ -35,7 +35,7 @@ Vous pouvez voir un exemple du fonctionnement des webmentions sur mon site dans 
 
 L'hébergement de mon propre contenu et de mes commentaires me permet d'être un peu plus créatif avec ce contenu. J'ai donc décidé d'aller un peu plus loin et de [m'amuser un peu](https://twitter.com/zachleat/status/1132727088031653891).
 
-First, how do we find out if a comment is negative? Let’s try to use [Natural, a plugin on npm](https://www.npmjs.com/package/natural). I added a Liquid filter to my [Eleventy configuration file](https://www.11ty.io/docs/config/) to analyze text and spit out a sentiment value. `0` is neutral, `< 0` is negative, and `> 0` is positive. Note that this natural language processing isn’t 100% (sometimes I’ll get a false positive) but this is just a fun demo on my site.
+Tout d'abord, comment trouver si un commentaire est négatif ? Essayons d'utiliser [Natural, un plugin sur npm](https://www.npmjs.com/package/natural). J'ai ajouté un filtre Liquid à mon [fichier de configuration Eleventy](https://www.11ty.io/docs/config/) pour analyser le texte et cracher une valeur sentiment. `0` est neutre, `< 0` est négatif, et `> 0` est positif. Notez que ce traitement de langage naturel n'est pas fiable à 100% (parfois, je reçois un faux positif) mais c'est juste une démo amusante sur mon site.
     
 ```
 const Natural = require('natural');
@@ -53,7 +53,7 @@ module.exports = function(eleventyConfig)
 };
 ```
 
-And then in my Liquid template, I use this integer value to add a `static-comments-reply-salty` class:
+Ensuite dans mon template Liquid, j'utilise cette valeur entière pour l'ajouter à une classe `static-comments-reply-salty` :
 
 ```    
 {% assign sentiment = webmention.content.text | getSentimentValue %}
@@ -61,17 +61,17 @@ And then in my Liquid template, I use this integer value to add a `static-comme
         …
     
 
-And then in my stylesheet, I use this class to opt-into a lovely stack of Comic Sans, Chalkboard, and of course a fantasy fallback for kicks:
+Et pour finir dans ma feuille de style, j'utilise cette classe pour ajouter une joli couche de Comic Sans, Chalkboard, et bien sûr un fallback fantasy pour les coups :
     
 ```
 .static-comments-reply-salty {    font-family: Comic Sans MS, Chalkboard SE, fantasy;}
 
 
-As extra credit, I also used the [`random-case` plugin](https://www.npmjs.com/package/random-case) to `mODifY tHe TeXt` (at [David Darnes excellent recommendation](https://twitter.com/DavidDarnes/status/1132732852196511744)).
+Comme crédit supplémentaire, j'ai aussi utilisé le [plugin `random-case`](https://www.npmjs.com/package/random-case) pour `mODifEr lE TeXte` (sur l'excellente recommdantation de [David Darnes](https://twitter.com/DavidDarnes/status/1132732852196511744)).
 
-## HOW DOES IT LOOK?
+## À QUOI ÇA RESSEMBLE ? 
 
-This was taken from a real comment on my site.
+Ceci a été pris à partir d'un véritable commentaire sur mon site.
 
 ### AVANT :
 
@@ -93,9 +93,7 @@ _22 Feb 2015 at 12:03PM_
 
 heY mAN, yOu nEEd TO fix ThIs Or TaKE IT Down. don'T YoU SeE hOw MAnY PeOplE arE cOmPlaIning thAt iT DOEsN't WorK?
 
-This isn’t intended to be a hot-take on Comic Sans. Instead it’s meant to change the tone of the negativity to make it sound like a clown is yelling at a kid’s birthday party.
-
-  
+Ceci n’est pas destiné à défoncer le Comic Sans. Au lieu de cela, la police est censée changer le ton de la négativité pour donner l’impression qu’un clown est en train de crier à la fête d’anniversaire d’un enfant.  
 
 
 
