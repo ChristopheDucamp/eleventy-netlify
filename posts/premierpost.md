@@ -1,9 +1,9 @@
 ---
 title: Mon premier post sur Eleventy
-date: 2019-03-01T00:00:00.000Z
+date: 2019-06-19T23:00:00.000Z
 summary: >-
-  Pourquoi contempler notre mortalité peut être un puissant catalyseur de
-  changement
+  Un résumé d'eleventy vu par la communauté indieweb avec une première page pour
+  démarrer sur mon wiki de travail. 
 tags:
   - post
   - indieweb
