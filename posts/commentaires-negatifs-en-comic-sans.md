@@ -2,12 +2,13 @@
 title: Afficher les commentaires de troll en Comic Sans
 date: 2019-03-07T00:00:00.000Z
 summary: >-
-  Zach est le créateur d'Elevante (le générateur qui motorise ce blog) et a participé avec joie au dernier indiewebcamp. Fan de générateur de sites statiques comme de polices de caractères, j'envisage d'étudier et traduire son post du 7 juin "Fender Snarky Comments in ComicSans" plus qu'inspirant pour designer et habiller les futures webmentions. Son site personnel motorisé par Eleventy est en outre un modèle du genre pour ce qui concerne l'implémentation du système de webmentions.
+  Zach est le créateur d'Eleventy (le générateur qui motorise ce blog) et a participé avec joie au dernier indiewebcamp. Fan de générateur de sites statiques comme de polices de caractères, j'envisage d'étudier et traduire son post du 7 juin "Fender Snarky Comments in ComicSans" plus qu'inspirant pour designer et habiller les futures webmentions. Son site personnel motorisé par Eleventy est en outre un modèle du genre pour ce qui concerne l'implémentation du système de webmentions.
 tags:
   - post
   - commentaires
   - comicsans
   - eleventy
+  - webmentions
 ---
 [Source du post en cours d'étude](https://www.zachleat.com/web/snarky/)
 
@@ -21,7 +22,7 @@ Lors de l'événement, j'ai pu installer un exemple fonctionnel de [webmentions
 
 Les webmentions sont rendues possibles pour les sites web statiques quand vous utilisez [webmention.io](https://webmention.io/), un service pour se connecter aux entrées entrantes. Un autre service, [Bridgy](https://brid.gy/), crawle les sites de réseaux sociaux pour les citations de mon site et envoie celles-ci automatiquement sur webmention.io.
 
-Si je vous ai déjà perdu, heureusement [Max Böck a écrit un magnifique tutoriel pour savoir comment faire ça en utilisant Eleventy](https://mxb.dev/blog/using-webmentions-on-static-sites/) (sont site est aussi merveilleux). Max a créé un  [projet de démarrage `eleventy-webmentions`](https://github.com/maxboeck/eleventy-webmentions) qui contient tout le code pour ça. Espérons que nous pourrons également intégrer ce type de contenu fusionné et intégré dans l'upstream `eleventy-base-blog`.
+Si je vous ai déjà perdu, heureusement [Max Böck a écrit un magnifique tutoriel pour savoir comment faire ça en utilisant Eleventy](https://mxb.dev/blog/using-webmentions-on-static-sites/) (son site est aussi merveilleux). Max a créé un  [projet de démarrage `eleventy-webmentions`](https://github.com/maxboeck/eleventy-webmentions) qui contient tout le code pour ça. Espérons que nous pourrons également intégrer ce type de contenu fusionné et intégré dans l'upstream `eleventy-base-blog`.
 
 Vous pouvez voir un exemple du fonctionnement des webmentions sur mon site dans l'un de mes articles de blog récents:  [Google Fonts is Adding `font-display`](https://www.zachleat.com/web/google-fonts-display/#webmentions).
 
@@ -52,8 +53,8 @@ Ensuite dans mon template Liquid, j'utilise cette valeur entière pour l'ajouter
 
 ```    
 {% assign sentiment = webmention.content.text | getSentimentValue %}
-<li class="static-comments-reply{% if sentiment < 0 %} static-comments-reply-salty{% endif %}">``
-    
+<li class="static-comments-reply{% if sentiment < 0 %} static-comments-reply-salty{% endif %}">
+```    
 
 Et pour finir dans ma feuille de style, j'utilise cette classe pour ajouter une joli couche de Comic Sans, Chalkboard, et bien sûr un fallback fantasy pour les coups :
     
@@ -61,7 +62,7 @@ Et pour finir dans ma feuille de style, j'utilise cette classe pour ajouter une 
 .static-comments-reply-salty {    
          font-family: Comic Sans MS, Chalkboard SE, fantasy;
 }
-
+```
 
 Comme crédit supplémentaire, j'ai aussi utilisé le [plugin `random-case`](https://www.npmjs.com/package/random-case) pour `mODifEr lE TeXte` (sur l'excellente recommdantation de [David Darnes](https://twitter.com/DavidDarnes/status/1132732852196511744)).
 
