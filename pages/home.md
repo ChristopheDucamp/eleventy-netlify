@@ -1,7 +1,6 @@
 ---
-layout: layouts/home.njk
-title: Home
-date: 2016-01-01T00:00:00.000Z
+title: Page d'Accueil
+date: 2019-06-01T15:00:00.000Z
 permalink: /
 navtitle: Accueil
 tags:
