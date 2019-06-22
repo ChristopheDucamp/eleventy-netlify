@@ -15,19 +15,20 @@ tags:
 ---
 [Source du post en cours d'étude](https://www.zachleat.com/web/snarky/)
 
-I had the pleasure of attending an [IndieWebCamp](https://indieweb.org/) before the amazing [Beyond Tellerrand](https://beyondtellerrand.com/) conference a few weeks back and I’m still [buzzing](https://twitter.com/zachleat/status/1127489938448977920) from the experience.
+J'aie eu le plaisir de participer à un [IndieWebCamp](https://indieweb.org/) avant la merveilleuse conférence  [Beyond Tellerrand](https://beyondtellerrand.com/) il y a quelques semaines et je continue encore à [buzzer](https://twitter.com/zachleat/status/1127489938448977920) de l'expérience.
 
-I can’t really express how meaningful this experience was to me. An antithesis to the rat race of social media, IndieWebCamp was a roomful of kindred spirits that care about the web and their own websites and hosting their own content. It felt like the Google Reader days again, when everyone was blogging and writing on their own sites. I dunno if you can tell but I loved it. If you get the chance to attend one of these events, jump on it (I really want to run one in Omaha 👀).
+Je ne parviens pas à vraiment exprimer ce que fut pour moi l’importance de cette expérience. Une antithèse à la course des médias sociaux, IndieWebCamp était une salle remplie d'esprits semblables qui s'intéressent au Web et à leurs propres sites Web et hébergent leur propre contenu. Cela ressemblait aux jours de Google Reader, lorsque tout le monde bloguait et écrivait sur ses propres sites. Je ne sais pas si vous pouvez le dire, mais j'ai adoré. Si vous avez la chance d'assister à l'un de ces événements, sautez dessus (je veux vraiment en organiser un à Omaha 👀).
 
 ## WEBMENTIONS, DISQUS, WORDPRESS
 
-At the event I got a working example of [webmentions](https://indieweb.org/Webmention) going on my personal web site. I already had [a static copy of my old Disqus comments that I’d exported](https://www.zachleat.com/web/disqus-import/) (which included copies of old Wordpress comments that I’d imported into Disqus 😎).
+Lors de l'événement, j'ai pu installer un exemple fonctionnel de [webmentions](https://indieweb.org/Webmention) sur mon propre site web personnel. J'avais déjà eu [une copie statique des mes vieux commentaires Disqus que j'avais exporté](https://www.zachleat.com/web/disqus-import/) (qui comprenaient des copies de vieux commentaires Wordpress que j'avais importé dans Disqus 😎).
 
-Webmentions are made possible for static web sites when you use [webmention.io](https://webmention.io/), a service to log incoming entries. Another service, [Bridgy](https://brid.gy/), crawls social networking sites for mentions of my site and sends those over to webmention.io automatically.
+Les webmentions sont rendues possibles pour les sites web statiques quand vous utilisez [webmention.io](https://webmention.io/), un service pour se connecter aux entrées entrantes. Un autre service, [Bridgy](https://brid.gy/), crawle les sites de réseaux sociaux pour les citations de mon site et envoie celles-ci automatiquement sur webmention.io.
 
-If I’ve already lost you, luckily [Max Böck wrote up a lovely tutorial on how to do this using Eleventy](https://mxb.dev/blog/using-webmentions-on-static-sites/) (his site is amazing, too). Max also created an [`eleventy-webmentions` starter project](https://github.com/maxboeck/eleventy-webmentions) which has all the code for this. Hopefully we can get some form of this merged back into the upstream `eleventy-base-blog` too.
+Si je vous ai déjà perdu, heureusement [Max Böck a écrit un magnifique tutoriel pour savoir comment faire ça en utilisant Eleventy](https://mxb.dev/blog/using-webmentions-on-static-sites/) (sont site est aussi merveilleux). Max a créé un  [projet de démarrage `eleventy-webmentions`](https://github.com/maxboeck/eleventy-webmentions) qui contient tout le code pour ça. Espérons que nous pourrons également intégrer ce type de contenu fusionné et intégré dans l'upstream `eleventy-base-blog`.
 
-You can see an example of how the webmentions look on my site at one of my recent blog posts: [Google Fonts is Adding `font-display`](https://www.zachleat.com/web/google-fonts-display/#webmentions).
+Vous pouvez voir un exemple du fonctionnement des webmentions sur mon site dans l'un de mes articles de blog récents:  [Google Fonts is Adding `font-display`](https://www.zachleat.com/web/google-fonts-display/#webmentions).
+
 
 ## ANALYSE DE SENTIMENT
 
