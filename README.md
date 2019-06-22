@@ -1,6 +1,6 @@
 [![Statut Netlify](https://api.netlify.com/api/v1/badges/bbf28a84-4bdb-407b-a2fa-32628d27fa3d/deploy-status)](https://app.netlify.com/sites/eleventy-netlify-boilerplate/deploys)
 
-# Eleventy Netlify Boilerplate
+# Paquet de Code Eleventy Netlify
 
 ## Qu'est-ce que c'est ?
 
@@ -53,30 +53,26 @@ Maintenant que tout est paramétré, vous pouvez commencer à modifier le conten
 
 ## Gotchas
 
-If you change the repo that was created at deploy time from public to private, you'll need to regenerate your token,
-as the token generated using the deploy to Netlify button can only access public repositories. To
-regenerate your token, head to "Settings" in your Netlify site dashboard, go to the "Identity"
-section, then scroll to "Services" where you'll see an "Edit settings" button. Click that and you'll
-see a text link to "Generate access token in GitHub".
+Si vous changez le repo qui a été créé au moment du déploiement de public vers privé, vous devrez regénérer votre token, car le token généré en utilisant le bouton Netlify ne peut accéder qu'à des repos publics. Pour regenérer votre token, rendez-vous dans les "Settings" de votre tableau de bord Netlify, et allez sur la section "Identity", puis descendez vers "Services" où vous verrez un bouton "Edit settings". Cliquez dessus et vous verre un lien texte pour "Generate access token in GitHub".
 
-If you need any help with setting up Netlify CMS, you can reach out to the Netlify team in the [Netlify CMS Gitter](https://gitter.im/netlify/netlifycms).
+Si vous avez besoin de toute aide pour paramtétrer le CMS Netlify, vous pouvez joindre l'équipe Netlify dans le gitter CMS](https://gitter.im/netlify/netlifycms).
 
 ## Développement Local
 
 ### 1. Clonez ce repository :
 
 ```
-git clone https://github.com/danurbanowicz/eleventy-netlify-boilerplate.git my-blog-name
+git clone https://github.com/danurbanowicz/eleventy-netlify-boilerplate.git mon-nom-de-blog
 ```
 
 
 ### 2. Naviguez vers le répertoire 
 
 ```
-cd my-blog-name
+cd mon-nom-de-blog
 ```
 
-Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
+Jetez un oeil spécifiquement sur `.eleventy.js` pour voir si vous voulez configurer différemment toutes les options Eleventy.
 
 ### 3. Installez les dépendances
 
@@ -94,18 +90,18 @@ This file contains your site title and author details.
 npx eleventy
 ```
 
-Or build automatically when a template changes:
+Ou construisez automatiquement quand un template est modifié :
 ```
 npx eleventy --watch
 ```
 
-Or in debug mode:
+Ou en mode debug :
 ```
 DEBUG=* npx eleventy
 ```
 
-## Bug reports, feature requests, etc
+## Rapports de Bug, demandes de fonctionnalités, etc
 
-This is an ongoing project and I welcome contributions. Feel free to submit a PR.
+Ceci est un projet en cours et les contributions sont bienvenues. Sentez-vous libre de proposer une PR.
 
-If you need any help with setting up Netlify CMS, you can reach out to the Netlify team in the [Netlify CMS Gitter](https://gitter.im/netlify/netlifycms).
+Si vous avez besoin de toute aide pour paramtétrer le CMS Netlify, vous pouvez joindre l'équipe Netlify dans le gitter CMS](https://gitter.im/netlify/netlifycms).
