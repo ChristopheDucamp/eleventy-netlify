@@ -57,14 +57,15 @@ Ensuite dans mon template Liquid, j'utilise cette valeur entière pour l'ajouter
 
 ```    
 {% assign sentiment = webmention.content.text | getSentimentValue %}
-<li class="static-comments-reply{% if sentiment < 0 %} static-comments-reply-salty{% endif %}">
-        …
+<li class="static-comments-reply{% if sentiment < 0 %} static-comments-reply-salty{% endif %}">``
     
 
 Et pour finir dans ma feuille de style, j'utilise cette classe pour ajouter une joli couche de Comic Sans, Chalkboard, et bien sûr un fallback fantasy pour les coups :
     
 ```
-.static-comments-reply-salty {    font-family: Comic Sans MS, Chalkboard SE, fantasy;}
+.static-comments-reply-salty {    
+         font-family: Comic Sans MS, Chalkboard SE, fantasy;
+}
 
 
 Comme crédit supplémentaire, j'ai aussi utilisé le [plugin `random-case`](https://www.npmjs.com/package/random-case) pour `mODifEr lE TeXte` (sur l'excellente recommdantation de [David Darnes](https://twitter.com/DavidDarnes/status/1132732852196511744)).
@@ -75,7 +76,7 @@ Ceci a été pris à partir d'un véritable commentaire sur mon site.
 
 ### AVANT :
 
-  1. ![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
+![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
 
 ### Jeez Louise DISQUS
 
@@ -85,7 +86,7 @@ Hey man, you need to fix this or take it down. Don't you see how many people are
 
 ### APRÈS :
 
-  1. ![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
+![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
 
 ### Jeez Louise DISQUS
 
