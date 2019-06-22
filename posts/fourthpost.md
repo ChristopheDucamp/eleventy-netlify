@@ -1,16 +1,97 @@
 ---
-title: Voici mon quatrième post
-summary: J'envisage la transition comme un puissant catalyseur de changement
-date: 2019-03-03
+title: les commentaires de troll en comics sans ?
+date: 2019-03-07T00:00:00.000Z
+summary: >-
+  Zach a participé avec joie au dernier indiewebcamp. Fan de générateur de sites
+  statiques et de polices de caractères, j'envisage d'étudier et traduire son
+  post du 7 juin "Fender Snarky Comments in ComicSans". Son site personnel
+  motorisé par Eleventy est en outre un modèle d'implémentation du système de
+  webmentions.
 tags:
   - post
-  - environnement
-  - politique
+  - commentaires
+  - comicsans
+  - eleventy
 ---
+I had the pleasure of attending an [IndieWebCamp](https://indieweb.org/) before the amazing [Beyond Tellerrand](https://beyondtellerrand.com/) conference a few weeks back and I’m still [buzzing](https://twitter.com/zachleat/status/1127489938448977920) from the experience.
 
-Tirer partie des frameworks agiles pour fournir un synopsis robuste pour des aperçus de haut niveau. Les approches itératives de la stratégie d'entreprise favorisent la réflexion collaborative pour faire avancer la proposition de valeur globale. Développez de manière organique la vision globale de l'innovation perturbatrice via la diversité et l'autonomisation des lieux de travail.
+I can’t really express how meaningful this experience was to me. An antithesis to the rat race of social media, IndieWebCamp was a roomful of kindred spirits that care about the web and their own websites and hosting their own content. It felt like the Google Reader days again, when everyone was blogging and writing on their own sites. I dunno if you can tell but I loved it. If you get the chance to attend one of these events, jump on it (I really want to run one in Omaha 👀).
+
+## WEBMENTIONS, DISQUS, WORDPRESS
+
+At the event I got a working example of [webmentions](https://indieweb.org/Webmention) going on my personal web site. I already had [a static copy of my old Disqus comments that I’d exported](https://www.zachleat.com/web/disqus-import/) (which included copies of old Wordpress comments that I’d imported into Disqus 😎).
+
+Webmentions are made possible for static web sites when you use [webmention.io](https://webmention.io/), a service to log incoming entries. Another service, [Bridgy](https://brid.gy/), crawls social networking sites for mentions of my site and sends those over to webmention.io automatically.
+
+If I’ve already lost you, luckily [Max Böck wrote up a lovely tutorial on how to do this using Eleventy](https://mxb.dev/blog/using-webmentions-on-static-sites/) (his site is amazing, too). Max also created an [`eleventy-webmentions` starter project](https://github.com/maxboeck/eleventy-webmentions) which has all the code for this. Hopefully we can get some form of this merged back into the upstream `eleventy-base-blog` too.
+
+You can see an example of how the webmentions look on my site at one of my recent blog posts: [Google Fonts is Adding `font-display`](https://www.zachleat.com/web/google-fonts-display/#webmentions).
+
+## SENTIMENT ANALYSIS
+
+Hosting my own content and comments allows me to be a bit more creative with it. So I decided to take this a step further and have [a little fun](https://twitter.com/zachleat/status/1132727088031653891) with negative comments.
+
+First, how do we find out if a comment is negative? Let’s try to use [Natural, a plugin on npm](https://www.npmjs.com/package/natural). I added a Liquid filter to my [Eleventy configuration file](https://www.11ty.io/docs/config/) to analyze text and spit out a sentiment value. `0` is neutral, `< 0` is negative, and `> 0` is positive. Note that this natural language processing isn’t 100% (sometimes I’ll get a false positive) but this is just a fun demo on my site.
+    
+```
+const Natural = require('natural');
+const analyze = new Natural.SentimentAnalyzer("English", Natural.PorterStemmer, "afinn");
+module.exports = function(eleventyConfig) 
+   {  
+       eleventyConfig.addLiquidFilter("getSentimentValue", function(content) 
+     {        
+      if( content ) {            
+      const tokenizer = new Natural.WordTokenizer();
+      return analyze.getSentiment(tokenizer.tokenize(content));
+}     
+     return 0;    
+  });
+};
+```
+
+And then in my Liquid template, I use this integer value to add a `static-comments-reply-salty` class:
+
+```    
+{% assign sentiment = webmention.content.text | getSentimentValue %}
+<li class="static-comments-reply{% if sentiment < 0 %} static-comments-reply-salty{% endif %}">
+        …
+    
+
+And then in my stylesheet, I use this class to opt-into a lovely stack of Comic Sans, Chalkboard, and of course a fantasy fallback for kicks:
+    
+```
+.static-comments-reply-salty {    font-family: Comic Sans MS, Chalkboard SE, fantasy;}
+
+
+As extra credit, I also used the [`random-case` plugin](https://www.npmjs.com/package/random-case) to `mODifY tHe TeXt` (at [David Darnes excellent recommendation](https://twitter.com/DavidDarnes/status/1132732852196511744)).
+
+## HOW DOES IT LOOK?
+
+This was taken from a real comment on my site.
+
+### BEFORE:
+
+  1. ![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
+
+### Jeez Louise DISQUS
+
+_22 Feb 2015 at 12:03PM_
+
+Hey man, you need to fix this or take it down. Don't you see how many people are complaining that it doesn't work?
+
+### AFTER:
+
+  1. ![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
+
+### Jeez Louise DISQUS
+
+_22 Feb 2015 at 12:03PM_
+
+heY mAN, yOu nEEd TO fix ThIs Or TaKE IT Down. don'T YoU SeE hOw MAnY PeOplE arE cOmPlaIning thAt iT DOEsN't WorK?
+
+This isn’t intended to be a hot-take on Comic Sans. Instead it’s meant to change the tone of the negativity to make it sound like a clown is yelling at a kid’s birthday party.
 
   
-[NBI1]: NBImages/Gibert-J'enregistre-mes-articles-2019-03-02-15-35-23.jpg
-->[![][NBI1]][NBI1]<-
+
+
 
