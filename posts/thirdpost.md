@@ -1,7 +1,9 @@
 ---
-title: Voici mon troisième article qui un titre plutôt longuet
-summary: Pourquoi contempler notre mortalité peut être un puissant catalyseur de changement
-date: 2019-06-21
+title: Voici un article avec un titre plutôt longuet
+date: 2019-06-21T00:00:00.000Z
+summary: >-
+  Pourquoi contempler notre mortalité peut être un puissant catalyseur de
+  changement
 tags:
   - post
   - tech
