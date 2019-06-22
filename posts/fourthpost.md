@@ -13,6 +13,8 @@ tags:
   - comicsans
   - eleventy
 ---
+[Source du post en cours d'étude](https://www.zachleat.com/web/snarky/)
+
 I had the pleasure of attending an [IndieWebCamp](https://indieweb.org/) before the amazing [Beyond Tellerrand](https://beyondtellerrand.com/) conference a few weeks back and I’m still [buzzing](https://twitter.com/zachleat/status/1127489938448977920) from the experience.
 
 I can’t really express how meaningful this experience was to me. An antithesis to the rat race of social media, IndieWebCamp was a roomful of kindred spirits that care about the web and their own websites and hosting their own content. It felt like the Google Reader days again, when everyone was blogging and writing on their own sites. I dunno if you can tell but I loved it. If you get the chance to attend one of these events, jump on it (I really want to run one in Omaha 👀).
@@ -27,7 +29,7 @@ If I’ve already lost you, luckily [Max Böck wrote up a lovely tutorial on ho
 
 You can see an example of how the webmentions look on my site at one of my recent blog posts: [Google Fonts is Adding `font-display`](https://www.zachleat.com/web/google-fonts-display/#webmentions).
 
-## SENTIMENT ANALYSIS
+## ANALYSE DE SENTIMENT
 
 Hosting my own content and comments allows me to be a bit more creative with it. So I decided to take this a step further and have [a little fun](https://twitter.com/zachleat/status/1132727088031653891) with negative comments.
 
@@ -69,7 +71,7 @@ As extra credit, I also used the [`random-case` plugin](https://www.npmjs.com/
 
 This was taken from a real comment on my site.
 
-### BEFORE:
+### AVANT :
 
   1. ![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
 
@@ -79,7 +81,7 @@ _22 Feb 2015 at 12:03PM_
 
 Hey man, you need to fix this or take it down. Don't you see how many people are complaining that it doesn't work?
 
-### AFTER:
+### APRÈS :
 
   1. ![](https://www.gravatar.com/avatar/38e4a1731159a21bbce9890693c81380?d=mm&s=60)
 
