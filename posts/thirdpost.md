@@ -1,6 +1,6 @@
 ---
 title: Voici un article avec un titre plutôt longuet
-date: 2019-06-21T00:00:00.000Z
+date: 2019-06-14T00:00:00.000Z
 summary: >-
   Pourquoi contempler notre mortalité peut être un puissant catalyseur de
   changement
